@@ -1,0 +1,172 @@
+$background_color1: #003b46;
+$background_color2: #07575b;
+$background_color3: #66a5ad;
+$background_color4: #c4dfe6;
+$color_text1: #ffffff;
+$color_text2: #aaa;
+$color_text_pillows: #65003e;
+$color_text_pillows_blue: #000080;
+$color_text_jerry: #ff7518;
+$color_text_jerrywithpillow: #cca300;
+$color_jerry_in_deapers: #c5007b;
+$color_jerry_small: #808000;
+$color_jerry_steals_cheese: #19e619;
+$color_jerry_triangle: #ff8c69;
+$color_jerry_guilty: #bf4a70;
+$color_jerry_bye: #ba55d3;
+$color_jerry_surprise: #008080;
+$color_tom: #596673;
+$color_tom_small: #03c03c;
+$color_tom_smile: #cc0000;
+$color_tom_angry: #4e2776;
+$color_tom_jerry: #e34234;
+$color_tom_jerry_suit: #704214;
+$color_tom_jerry_catch: #df73ff;
+$color_text_hover: #2d5373;
+
+.html_field_block {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    border-right: 1px solid $color_text2;
+    border-left: 1px solid $color_text2;
+    border-bottom: 1px solid $color_text2;
+}
+
+.html_title_block {
+    display: flex;
+    background-color: $background_color2;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.html_main_block {
+    display: flex;
+    border-top: 1px solid $color_text2;
+}
+
+.html_aside_block {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: $background_color1;
+    color: $color_text2;
+    line-height: 130%;
+    border-right: 1px solid $color_text2;
+}
+
+.html_tag_block {
+    color: $color_text2;
+    background-color: $background_color4;
+    padding: 3px;
+    width: 100%;
+    line-height: 130%;
+    font-weight: bold;
+}
+
+.level_code {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 800px) {
+    .html_aside_block {
+        line-height: 110%;
+        font-size: 90%;
+    }
+    .html_tag_block {
+        line-height: 110%;
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .html_aside_block {
+        line-height: 100%;
+        font-size: 80%;
+    }
+    .html_tag_block {
+        line-height: 100%;
+        font-size: 80%;
+    }
+    .html_title {
+        font-size: 80%;
+    }
+    
+    .tag_title {
+        font-size: 80%;
+    }
+}
+
+.pillow_code {
+    color: $color_text_pillows;
+}
+
+.pillow_red_code {
+    color: $color_text_pillows;
+}
+.pillow_blue_code {
+    color: $color_text_pillows_blue;
+}
+.jerry_code {
+    color: $color_text_jerry;
+}
+.jerry_with_cheese_code {
+    color: $color_text_jerrywithpillow;
+}
+
+.jerry_triangle_code {
+    color: $color_jerry_triangle;
+}
+
+.jerry_guilty_code {
+    color: $color_jerry_guilty;
+}
+.jerry_bye_code {
+    color: $color_jerry_bye;
+}
+.jerry_surprise_code {
+    color: $color_jerry_surprise;
+}
+.jerry_small_code {
+    color: $color_jerry_small;
+}
+
+.tom_code {
+    color: $color_tom;
+}
+
+.tom_small_code {
+    color: $color_tom_small;
+}
+
+.tom_smile_code {
+    color: $color_tom_smile;
+}
+
+.tom_angry_code {
+    color: $color_tom_angry;
+}
+.tom_jerry_code {
+    color: $color_tom_jerry;
+}
+.tom_jerry_suit_code {
+    color: $color_tom_jerry_suit;
+}
+.tom_jerry_catch_code {
+    color: $color_tom_jerry_catch;
+}
+
+.jerry_in_deapers_code {
+    color: $color_jerry_in_deapers;
+}
+
+.jerry_steals_cheese_code {
+    color: $color_jerry_steals_cheese;
+}
+
+.hover_code {
+    color: $color_text_hover;
+    font-size: 120%;
+    font-style: italic;
+}

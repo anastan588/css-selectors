@@ -1,0 +1,153 @@
+$background_color1: #003b46;
+$background_color2: #07575b;
+$background_color3: #66a5ad;
+$background_color4: #c4dfe6;
+$color_text1: #ffffff;
+$color_text2: #aaa;
+
+.css_field_block {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    border-bottom: 1px solid $color_text2;
+}
+
+.css_title_block {
+    display: flex;
+    background-color: #07575b;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.css_main_block {
+    display: flex;
+    border-top: 1px solid $color_text2;
+}
+
+.css_aside_block {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: $background_color4;
+    color: $color_text2;
+    line-height: 130%;
+}
+
+.css_styles_block {
+    color: $color_text2;
+    background-color: $color_text1;
+    padding: 3px;
+    width: 100%;
+}
+.css_input_block {
+    display: flex;
+    gap: 15px;
+}
+
+.css_input {
+    width: 90%;
+    animation: blinkingInput;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinkingInput {
+    0% {
+        background-color: inherit;
+        opacity: 1;
+    }
+    50% {
+        background-color: $background_color2;
+        opacity: 0.6;
+    }
+    100% {
+        background-color: inherit;
+        opacity: 1;
+    }
+}
+
+.css_input::placeholder {
+    color: $color_text2;
+    font-size: 130%;
+}
+
+.css_input_button {
+    border: 2px solid $color_text2;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    align-self: center;
+    border-bottom: 8px outset $color_text2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.enter_animation {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: enter;
+}
+
+@keyframes enter {
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.css_input_button:hover {
+    transform: scale(1.1);
+}
+.css_information_block {
+    line-height: 130%;
+}
+
+@media screen and (max-width: 800px) {
+    .css_aside_block {
+        line-height: 110%;
+        font-size: 90%;
+    }
+    .css_input_block {
+        line-height: 110%;
+        font-size: 90%;
+    }
+    .css_input::placeholder {
+      font-size: 90%;
+  }
+    .css_information_block {
+      line-height:110%;
+      font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .css_aside_block {
+        line-height: 100%;
+        font-size: 80%;
+    }
+    .css_input_block {
+        line-height: 100%;
+        font-size: 80%;
+    }
+    .html_title {
+        font-size: 80%;
+    }
+
+    .style_title {
+        font-size: 80%;
+    }
+    .css_input::placeholder {
+        font-size: 80%;
+    }
+    .css_information_block {
+      line-height:100%;
+      font-size: 80%;
+  }
+}

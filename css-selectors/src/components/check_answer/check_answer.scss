@@ -1,0 +1,47 @@
+.win {
+    animation-name: win;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes win {
+      20% {
+          opacity: 1;
+          transform: translate3d(-20px, 0, 0) scaleX(0.9);
+      }
+  
+      to {
+          opacity: 0;
+          transform: translate3d(2000px, 0, 0) scaleX(2);
+      }
+  }
+  
+
+  .loose {
+    animation-name: loose;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes loose {
+    from,
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translate3d(0, 10px, 0);
+    }
+  }
+  

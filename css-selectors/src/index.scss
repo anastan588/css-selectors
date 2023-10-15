@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Toonish';
+    src: url('./assets/fonts/toonish.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*Normalize*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+
+.bigred {
+    font-size: 20px;
+    color: red;
+}
+
+/*Normalize*/
+
+/*mixins*/
+$font_toonish: 'Toonish', sans-serif;
+$background_color1: #003b46;
+$background_color2: #07575b;
+$background_color3: #66a5ad;
+$background_color4: #c4dfe6;
+$color_text1: #ffffff;
+$color_text2: #aaa;
+/*mixins*/
+
+.main_container {
+    font-family: $font_toonish;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto 1fr auto;
+    color: $color_text1;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.header {
+    background-color: $background_color1;
+    color: $color_text1;
+    grid-template-columns: 95% 5%;
+    grid-template-rows: auto;
+    display: grid;
+    padding: 10px;
+    width: 100%;
+}
+.title {
+    font-weight: bold;
+    font-size: 180%;
+    justify-self: center;
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 160%;
+    }
+}
+
+.levels {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: $background_color2;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    background-image: url(assets/icons/tomwithjerry1.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    transition: all 1s ease;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background_color3;
+    gap: 15px;
+    padding: 15px;
+    position: relative;
+    background-image: url(assets/icons/logo2.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 12%;
+}
+
+.current_level {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.footer {
+    background-color: $background_color1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.github_link {
+    display: block;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.github_link:hover {
+    transform: scale(1.1);
+}
+.github_image {
+    max-height: 25px;
+}
+
+.rsschool_link {
+    display: block;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.rsschool_link:hover {
+    transform: scale(1.1);
+}
+
+.rsschool_image {
+    max-height: 25px;
+}
+
+.window_win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+    border: 4px outset $background_color4;
+    background-color: $background_color1;
+    z-index: 5;
+}
+.window_win_title {
+    font-weight: bold;
+}
+.window_win_text {
+    font-style: italic;
+}
+.window_win_buttons {
+    display: flex;
+    gap: 30px;
+}
+.window_win_ok {
+    padding: 10px;
+    text-align: center;
+    border: 2px outset $background_color4;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.window_win_no {
+    padding: 10px;
+    text-align: center;
+    border: 2px outset $background_color4;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.window_win_ok:hover {
+    transform: scale(1.1);
+}
+
+.window_win_no:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1100px) {
+    .main_container {
+        display: flex;
+        flex-direction: column;
+    }
+    .main {
+        flex: 1 1 auto;
+    }
+
+    .levels {
+        position: absolute;
+        right: -100%;
+        top: 52px;
+        z-index: 5;
+        height: 70%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .levels {
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .levels {
+        height: 60%;
+    }
+}
